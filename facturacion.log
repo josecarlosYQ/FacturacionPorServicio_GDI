@@ -1,0 +1,47 @@
+2026-11-19 21:54:56,601 [INFO] facturacion: Sin configuración utilizable: No se encontró el archivo de configuración:
+  C:\Users\ytoqu\UCSM\S8\GDI\Practica\facturacion_pacifico\config.json
+Cree 'config.json' junto al programa (vea config.json.example).
+2026-11-19 21:55:04,286 [INFO] facturacion.setup: Base de datos 'facturacion_servicios' instalada/actualizada (27 sentencias)
+2026-11-19 21:55:04,408 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 21:57:47,359 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 22:11:41,033 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 22:43:22,811 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 22:45:28,727 [WARNING] facturacion: config.json existe pero la conexión falló: No se pudo conectar a MySQL: error de base de datos (1049): Unknown database 'facturacion_servicios'
+2026-11-19 22:45:40,952 [INFO] facturacion.setup: Base de datos 'facturacion_servicios' instalada/actualizada (27 sentencias)
+2026-11-19 22:45:41,108 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 23:00:55,869 [WARNING] facturacion: config.json existe pero la conexión falló: No se pudo conectar a MySQL: error de base de datos (1049): Unknown database 'facturacion_servicios'
+2026-11-19 23:01:45,553 [INFO] facturacion.setup: Base de datos 'facturacion_servicios' instalada/actualizada (27 sentencias)
+2026-11-19 23:01:45,650 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 23:04:31,526 [ERROR] facturacion.ui: Error en interfaz
+Traceback (most recent call last):
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\ui\tkinter_app.py", line 164, in _safe
+    return fn()
+           ^^^^
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\ui\tkinter_app.py", line 383, in op
+    self.empresas.guardar(emp, self._ruc_empresa_guardado)
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\dao\empresa_dao.py", line 46, in guardar
+    e = self._validar(empresa)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\dao\empresa_dao.py", line 34, in _validar
+    direccion_empresa=validar_texto(e.direccion_empresa, "dirección", 50),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\core\validators.py", line 32, in validar_texto
+    raise ValidationError(f"'{campo}' admite como máximo {max_len} caracteres.")
+core.errors.ValidationError: 'dirección' admite como máximo 50 caracteres.
+2026-11-19 23:09:23,617 [INFO] facturacion: Conexión establecida con MySQL (root@localhost/facturacion_servicios)
+2026-11-19 23:16:14,687 [ERROR] facturacion.ui: Error en interfaz
+Traceback (most recent call last):
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\ui\tkinter_app.py", line 164, in _safe
+    return fn()
+           ^^^^
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\ui\tkinter_app.py", line 383, in op
+    self.empresas.guardar(emp, self._ruc_empresa_guardado)
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\dao\empresa_dao.py", line 46, in guardar
+    e = self._validar(empresa)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\dao\empresa_dao.py", line 32, in _validar
+    ruc_empresa=validar_ruc(e.ruc_empresa, "RUC de la empresa"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ytoqu\UCSM\S8\GDI\Entregas5y6\Proyecto\facturacion_pacifico\core\validators.py", line 16, in validar_ruc
+    raise ValidationError(f"{campo} inválido: debe tener exactamente 11 dígitos.")
+core.errors.ValidationError: RUC de la empresa inválido: debe tener exactamente 11 dígitos.
